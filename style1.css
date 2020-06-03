@@ -1,0 +1,38 @@
+.header{
+    padding:10px 20px;
+    background-color:silver;
+}
+.nav, .content{
+    float:left;
+    padding:15px;
+    min-height: 200px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.nav{
+    width: 25%;
+    background-color:#141c2b;
+}
+.content{
+    width: 75%;
+    background-color: skyblue;
+}
+.footer{
+    background-color: silver;
+    text-align: center;
+}
+
+.clearfix:after{
+    content:"";
+    height: 0;
+    display:block;
+    clear:both;
+    visibility:hidden;
+}
+  
+ul li{
+    list-style: none;
+}
+iframe{
+    border: 0px;
+}

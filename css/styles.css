@@ -1,0 +1,164 @@
+/* Section  background*/
+.colored{
+    background-color: #00b556;
+    color:#ffff;
+}
+.white{
+    background-color:#ffff;
+}
+body{
+    font-family: 'Montserrat-Black', sans-serif;
+    font-weight: 900;
+}
+.heading{
+    font-size:3rem;
+    line-height: 2;
+    font-weight: 900;
+
+}
+.modal-content{
+    color: black;
+    font-size: 1rem;
+    margin-left: 1%;
+
+}
+.modal-title{
+text-align: center;
+}
+h1,h2,h3{
+    font-family: 'Montserrat-Black', sans-serif;
+    font-weight: 900;
+}
+.container-fluid{
+    padding: 3% 15% 7%;
+
+}
+/* Navigation Bar */
+.navbar{
+    padding-bottom: 4.5rem;
+}
+
+.nav-item{
+    padding: 0px 15px;
+}
+.nav-link{
+    font-family: "Khmer OS siemreap",'PT Sans', Arial, "Times New Roman", Times, serif;
+    text-transform: uppercase;
+    font-size: 1em;
+
+    color: white;
+}
+.download-button{
+    margin: 5% 3% 5% 0%;
+}
+#imgiphone{
+    transform: rotate(0deg);
+    width: 144%;
+    height: 125%;
+    position: relative;
+}
+
+
+/* Feature */
+#features{
+    padding: 7% 15%;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+
+}
+.features-box .feature-text{
+    font-size:1.5rem;
+}
+
+.degree-img{
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+}
+p{
+    font-family: 'Montserrat-Light';
+    color: #afafaf;
+}
+
+.degree-img:hover{
+    border: solid 5px #00b556;
+}
+/* 
+Testimonials */
+.testimonial-text{
+text-align: center;
+font-family: 'Montserrat-Bold';
+font-size:2rem;
+font-weight: 900;
+}
+.ttl-img{
+    width: 10%;
+    border-radius: 90%;
+    margin-left: 40%;
+}
+h2{
+    font-size:2.5rem;
+    line-height: 2;
+}
+#press{
+
+    text-align: center;
+    padding-bottom: 2%;
+}
+.press-img{
+    width: 25%;
+    padding: 0px 75px ;
+    position: relative;
+}
+.carousel-item{
+    padding: 7% 15%;
+}
+#pricing{
+    padding: 100px;
+    text-align: center;
+    color: #00b556;
+
+}
+.pringcol{
+    padding: 2% 2%;
+}
+/* Screen */
+
+@media (max-width: 1028px)
+{
+    #title{
+        text-align: center;
+    }
+    #imgiphone{
+        position: static;
+        transform: rotate(0);
+        width: 121%;
+        
+    }
+}
+/* cta */
+
+#cta{
+    text-align: center;
+    padding: 7% 15%;
+}
+#ctah3{
+    font-family: 'Montserrat Black';
+    font-size:3.5rem;
+    font-weight: 900;
+    line-height: 1.5;
+    padding: 7% 15%;
+    
+}
+/* footer */
+
+#footer{
+    color: #00b556;
+    text-align: center;
+    padding: 5% 5%;
+}
+.socialicon{
+  
+    margin: 5px 5px;
+}

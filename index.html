@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>SETECT INSTITUTE</title>
+  <link rel="icon" href="data:image/png;base64,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">
+
+  <Link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="https://kit.fontawesome.com/5fd8a07e6b.js" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Ubuntu:wght@700&display=swap"
+    rel="stylesheet">
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <section class="colored" id="title">
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark ">
+        <a class="navbar-brand" href="">
+          <img src="https://setecu.com/images/sampledata/icetheme/logo.png" width="330" height="100" alt=""
+            loading="lazy">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://setecu.com/index.php/contact-us">Contact Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://setecu.com/index.php/academic">ACADEMIC</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://setecu.com/index.php/internship">INTERNSHIP</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://setecu.com/index.php/facilities">FACILITIES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://setecu.com/index.php/about-us">ABOUT US</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Title -->
+
+      <Div class="row">
+
+        <div class="col-lg-6">
+          <h1 class="heading">Begin Your Education With us, End With Job Opportunity</h1>
+          <button style="color:#00b556" type="button" class="btn btn-light btn-lg download-button" data-toggle="modal"
+            data-target="#register">
+            Register</button>
+          <button type="button" class="btn btn-outline-light btn-lg download-button">
+            Enrollment</button>
+        </div>
+        <div class="col-lg-6 ">
+          <img id=imgiphone src="images/cover.png" alt="iphone-mockup">
+        </div>
+
+        <!-- Register -->
+        <div class="modal fade" id="register" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h4 class="modal-title">Register Form</h4>
+              </div>
+              <div class="modal-body">
+                <table width=85% height=155% align="center">
+                  <table align="center">
+                    <form name="myform" method="post" action="#" onsubmit="return validateform()">
+                      <tr>
+                        <td> <label for="username">Username:</label></td>
+                        <td> <input type="text" id=username name="username"></input></td>
+
+                      <tr>
+                        <td><label for="pw"> Password:</label></td>
+                        <td> <input type="password" id=pw name="password"></input></td>
+                      </tr>
+                      <tr>
+                        <td><label for="sex">Gender:</label> </td>
+                        <td><input type="radio" id=sex name="sex"> Male</input>
+                          <input type="radio" id=sex name="sex"> Female</input>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td> <label for="date">Date of birth:</label></td>
+                        <td> <input type="date" id=date name="date"></input></td>
+
+                      </tr>
+                      <tr>
+                        <td><label for="img">Upload Photo:</label> </td>
+                        <td><input type="file" id=img name="img"></input> </td>
+                      </tr>
+                      <tr>
+                        <td><label for="color">Color:</label></td>
+                        <td><input type="color" id=color name="color"></input></td>
+                      </tr>
+                      <tr>
+                        <td><label for="mail">E-mail:</label> </td>
+                        <td><input type="email" id=mail name="mail"></input> </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="sbj" id="sbj">Subject :</label><br>
+                          <input type="checkbox" name="sbj"> WEB I </input><br>
+                          <input type="checkbox" name="sbj"> GD II </input><br>
+                          <input type="checkbox" name="sbj"> Accoount </input><br>
+                          <input type="checkbox" name="sbj"> English </input><br>
+                          <input type="checkbox" name="sbj"> C#</input><br>
+                          <input type="checkbox" name="sbj"> A+</input><br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="submit" value="Register">
+                        </td>
+                      </tr>
+                    </form>
+                  </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- ---- END --- -->
+      </Div>
+    </div>
+  </section>
+
+  <!-- Features -->
+
+  <section class="white" id="features">
+    <h3 style="color: #00b556; padding-bottom: 3%;">Bachelor Degree in the field</h3>
+    <div class="row">
+
+      <div class="features-box col-lg-4 ">
+        <!-- <i class="fas fa-check-circle fa-4x"></i> -->
+        <img class="degree-img" src="https://setecu.com/cache/widgetkit/gallery/5/1design-3360d00c98.png">
+        <!-- <h3 class="feature-text">Easy to use.</h3> -->
+
+      </div>
+
+      <div class="features-box col-lg-4 ">
+        <!-- <i class="fas fa-dot-circle fa-4x"></i>
+        <h3 class="feature-text">Elite Clientele</h3> -->
+        <img class="degree-img" src="https://setecu.com/cache/widgetkit/gallery/5/2mis-78af9e6dd3.png">
+
+      </div>
+
+      <div class="features-box col-lg-4 ">
+        <!-- <i class="fas fa-heart fa-4x"></i>
+        <h3 class="feature-text">Guaranteed to work.</h3> -->
+        <img class="degree-img" src=https://setecu.com/cache/widgetkit/gallery/5/3bit-fd47460e18.png>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section class="colored" id="testimonials">
+
+    <div id="carouseltestimonials" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h2 class="testimonial-text">It is my pleasure to welcome students, families, and faculty to graduation day at
+            SETEC. Every one of you have made an impact on the graduates who sit here today.” “I stand here before you,
+            looking back on four years of legacy we've all made together.</h2>
+          <img class="ttl-img"
+            src="https://z-p3-scontent.fpnh5-1.fna.fbcdn.net/v/t31.0-8/s960x960/30167405_1774146792894969_4457420935005673737_o.jpg?_nc_cat=100&_nc_sid=7aed08&_nc_eui2=AeGXhU58-6YO5-wYE0RJ9Lb7yqN8-e_0BxLKo3z57_QHErGtohxsuBIi_1b2F0ZIeMgMz3tcKOjhKV-XBofT2xe-&_nc_ohc=TkxKJA0J2toAX9WpWbF&_nc_ht=z-p3-scontent.fpnh5-1.fna&_nc_tp=7&oh=43a5e27541e6f7d70b61a911c5e61372&oe=5F0589FD"
+            alt="borey-profile">
+          <em>Borey, Web Developer</em>
+        </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">As a student, it’s challenging but at the end, you will have it all by yourself.
+            I would also say this to our teachers that they teach u the truth and train us to be independent of our own
+            ideas in the long run. I would also urge our parents to believe in us that we can be successful in future.
+            It’s a duty of each and every one of you to make a decision..</h2>
+          <img class="ttl-img"
+            src="https://z-p3-scontent.fpnh5-3.fna.fbcdn.net/v/t1.0-9/p960x960/78271472_248123929499335_5218933371186446336_o.jpg?_nc_cat=104&_nc_sid=7aed08&_nc_eui2=AeHJCPFJkI2bxYuSC8PUP4vZNwZZQrXuvco3BllCte69ym8pAnor8PhXYjJ8S-i3d7GTZ2ROwdCq8qGblYFfEfwb&_nc_ohc=fCM3Rm_21T0AX_jaAHJ&_nc_ht=z-p3-scontent.fpnh5-3.fna&_nc_tp=6&oh=d0e02c5403b3ce190a143b683baa9443&oe=5F03A8D8"
+            alt="Willy-profile">
+          <em>Willy, IT Manager</em>
+        </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">It may, however, be a useful approach to college. Remember, you are not entering
+            a school. You are joining a new, incomplete community that will be defined by your engagement even as it
+            helps to shape your personality. Keep becoming yourself forever, but remember that an important part of that
+            becoming happened right here at SETEC..</h2>
+          <img class="ttl-img"
+            src="https://z-p3-scontent.fpnh5-3.fna.fbcdn.net/v/t1.0-9/89510140_125915658983391_5907947198930223104_n.jpg?_nc_cat=106&_nc_sid=7aed08&_nc_eui2=AeHwJLXeuoUNI2Iq_7TWoDAqNXM-e3TU4PI1cz57dNTg8mfswRLKpyfco-brs6I0Z2C8TqYoPryj6OzNHzFzjyL0&_nc_ohc=bquR2xreGbUAX93mrBo&_nc_ht=z-p3-scontent.fpnh5-3.fna&oh=1096f9dada3ae93559e00d10e6a9f715&oe=5F04A120"
+            alt="tangpeng-profile">
+          <em>TangPeng, CEO</em>
+        </div>
+      </div>
+      <!-- Next Or Prv -->
+      <a class="carousel-control-prev" href="#carouseltestimonials" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouseltestimonials" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- Press -->
+
+  <section class="colored" id="press">
+    <img class="press-img" src="https://kohsantepheapdaily.com.kh/wp-content/themes/kspg_twentyseventeen/img/kspg-logo.png" alt="kst-logo">
+    <img class="press-img" src="https://126372.smushcdn.com/1482014/wp-content/uploads/2018/09/VOD-03.png?lossy=1&strip=1&webp=1" alt="tnw-logo">
+    <img class="press-img" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Freshnews-logo.png" alt="freshnews-logo">
+   
+
+  </section>
+
+
+  <!-- Pricing -->
+
+  <section class="white" id="pricing">
+
+    <h2>School Fees of Bachelor Degree </h2>
+
+    <p>Non admin service & Textbook included</p>
+
+    <div class="row">
+
+      <div class="pringcol col-lg-4 col-md-6">
+        <!-- card 1 -->
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Design</h3>
+
+          </div>
+          <div class="card-body">
+
+
+            <h2>540$/ Semester</h2>
+            <p>8 Semesters OR 3.5 Years</p>
+            <p>INTERNSHIP PROGRAM 1 SEMESTER</p>
+            <p>Creative and innovation! </p>
+
+          </div>
+          <div class="card-footer">
+
+            <button type="button" class="btn btn-success btn-lg btn-block" target="https://setecu.com/index.php/academic/bachelor-degree/2014-07-17-00-21-50">Enroll Now !</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="pringcol col-lg-4 col-md-6">
+        <!-- card 2 -->
+        <div class="card">
+          <div class="card-header">
+            <h3>MIS</h3>
+          </div>
+          <div class="card-body">
+           
+            <h2>$390 Semester</h2>
+            <p>8 Semesters OR 3.5 Years</p>
+            <p>INTERNSHIP PROGRAM 1 SEMESTER</p>
+            <p>Technologies and innovation !</p>
+
+          </div>
+          <div class="card-footer">
+           <a href="https://setecu.com/index.php/academic/bachelor-degree/2014-07-17-00-21-15"><button type="button" class="btn btn-success btn-lg btn-block" >Enroll Now !</button></a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="pringcol col-lg-4 col-md-12">
+        <!-- card 3 -->
+        <div class="card">
+          <div class="card-header">
+            <h3>BIT</h3>
+
+          </div>
+          <div class="card-body">
+            <h2>$390 Semester</h2>
+            <p>8 Semesters OR 3.5 Years</p>
+            <p>INTERNSHIP PROGRAM 1 SEMESTER</p>
+            <p>Dual knowledge</p>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn btn-success btn-lg btn-block">Enroll Now !</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <section class="colored" id="cta">
+    <div>
+      <h3 id=ctah3>Join Us Today For The Better Future.</h3>
+    </div>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9a6MWzhbA9w" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+  </section>
+  <!-- Footer -->
+ 
+  <footer class="white" id="footer">
+    <h3>Visit Us on Google Map!</h3>
+    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.7742100463397!2d104.89248701451878!3d11.568037691787378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095173761d4a53%3A0xcd09ff2f4d326e3f!2sSETEC%20Institute!5e0!3m2!1sen!2skh!4v1591696252871!5m2!1sen!2skh" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </iframe>
+    <i class="socialicon fab fa-facebook-f"></i>
+    <i class="socialicon fab fa-twitter"></i>
+    <i class="socialicon fab fa-instagram"></i>
+    <i class="socialicon fas fa-mail-bulk"></i>
+    
+    <p>© Copyright 2020 SETEC</p>
+
+
+  </footer>
+
+
+  <script>
+    function validateform() {
+      var username = document.myform.username.value;
+      var password = document.myform.password.value;
+      var sex = document.myform.sex.value;
+      var date = document.myform.date.value;
+      var img = document.myform.img.value;
+      var mail = document.myform.mail.value;
+      var sbj = document.myform.sbj.value;
+
+      if (username == null || username == "") {
+        alert("Name can't be blank");
+        document.getElementById("username").style.borderColor = "red";
+        return false;
+      } else if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        document.getElementById("pw").style.borderColor = "red";
+        return false;
+      }
+      else if (sex == null || sex == "") {
+        alert("Please select your sex !");
+        document.getElementById("sex").style.borderColor = "red";
+      }
+      else if (date == null || date == "") {
+        alert("Please select your birth date !");
+        document.getElementById("date").style.borderColor = "red";
+      }
+      else if (img == null || img == "") {
+        alert("Please Upload your profile Photo !");
+        document.getElementById("img").style.borderColor = "red";
+      }
+      else if (mail == null || mail == "") {
+        alert("Email is required !");
+        document.getElementById("mail").style.borderColor = "red";
+      }
+      else if (sbj == null || sbj == "") {
+        alert("Please choose your subject atleast one !");
+        document.getElementById("sbj").style.borderColor = "red";
+      }
+
+    }  
+  </script>
+
+
+</body>
+
+</html>

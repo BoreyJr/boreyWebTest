@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIPTICT - TUBE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0px;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+            margin-top: 5%;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        html {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .header {
+            background-color: rgb(32, 66, 178);
+            color: #ffffff;
+            padding: 15px;
+            margin-top: 3%;
+        }
+
+        /*Menu*/
+        /* Add a black background color to the top navigation */
+        .topnav {
+            width: 100%;
+            background-color: #ffffff;
+            color: black;
+            overflow: hidden;
+            position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+            z-index: 1; /* Stay on top */
+            top: 0; /* Stay at the top */
+            left: 0;
+
+        }
+        /* Style the links inside the navigation bar */
+        .topnav a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            background-color: #ffffff;
+            color: black;
+            text-decoration-line: underline;
+            text-decoration-color: #203eb9;
+        }
+        /* Add an active class to highlight the current page */
+        .topnav a.active {
+            background-color: #ffffff;
+            color: black;
+        }
+        /* Hide the link that should open and close the topnav on small screens */
+        .topnav .icon {
+            display: none;
+            color: rgb(222, 46, 50);
+        }
+        /* For mobile phones: */
+        [class*="col-"] {
+            width: 100%;
+        }
+        @media only screen and (min-width: 600px) {
+            /* For tablets: */
+            .col-s-1 {
+                width: 8.33%;
+            }
+
+            .col-s-2 {
+                width: 16.66%;
+            }
+
+            .col-s-3 {
+                width: 25%;
+            }
+
+            .col-s-4 {
+                width: 33.33%;
+            }
+
+            .col-s-5 {
+                width: 41.66%;
+            }
+
+            .col-s-6 {
+                width: 50%;
+            }
+
+            .col-s-7 {
+                width: 58.33%;
+            }
+
+            .col-s-8 {
+                width: 66.66%;
+            }
+
+            .col-s-9 {
+                width: 75%;
+            }
+
+            .col-s-10 {
+                width: 83.33%;
+            }
+
+            .col-s-11 {
+                width: 91.66%;
+            }
+
+            .col-s-12 {
+                width: 100%;
+            }
+
+        }
+
+        @media only screen and (min-width: 768px) {
+            /* For desktop: */
+            .col-1 {
+                width: 8.33%;
+            }
+
+            .col-2 {
+                width: 16.66%;
+            }
+
+            .col-3 {
+                width: 25%;
+            }
+
+            .col-4 {
+                width: 33.33%;
+            }
+
+            .col-5 {
+                width: 41.66%;
+            }
+
+            .col-6 {
+                width: 50%;
+            }
+
+            .col-7 {
+                width: 58.33%;
+            }
+
+            .col-8 {
+                width: 66.66%;
+            }
+
+            .col-9 {
+                width: 75%;
+            }
+
+            .col-10 {
+                width: 83.33%;
+            }
+
+            .col-11 {
+                width: 91.66%;
+            }
+
+            .col-12 {
+                width: 100%;
+            }
+        }
+
+        iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+            /*frameborder:0;*/
+        }
+
+        p {
+            text-align: center;
+        }
+
+        /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+
+        /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+        @media screen and (max-width: 600px) {
+
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+
+        }
+
+        /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+        @media screen and (max-width: 600px) {
+            .header {
+                margin-top: 15%;
+            }
+            .topnav.responsive {
+                position: fixed;
+            }
+            .topnav.responsive a.icon {
+                /*position: absolute;*/
+                position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+                right: 0;
+                z-index: 1; /* Stay on top */
+                top: 0; /* Stay at the top */
+                /*left: 0;*/
+                background-color: #ffffff;
+                color: black;
+
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+
+            }
+        }
+        .footer {
+            background-color: rgb(222, 46, 50);
+            color: #ffffff;
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+    <a href="cssresponsive.html" class="active">NIPTICT - TUBE</a>
+    <a href="#algorithms">Advanced Algorithms</a>
+    <a href="#Computer_Architecture">Computer Architecture</a>
+    <a href="#Database">Database & Analysis</a>
+    <a href="#Web">Web Desgin</a>
+    <!--    <input type="text" placeholder="Search..">-->
+    <!--    <button type="submit"><i class="fa fa-search"></i></button>-->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+<!--|                    |-->
+<!--|     ALGORITHMS     |-->
+<!--|                    |-->
+<section id="algorithms">
+    <div class="row">
+        <h2 class="header" style="text-align: center;"> ADVANCED ALGORITHMS </h2>
+        <h3 style="text-align: center">Doctor. Dona Valy</h3>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1iW8bt0gWyIUNmswrgEjaZHA21u-idAoQ/preview">
+            </iframe>
+            <p> Advanced Pointer</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1Fr_WjUUKfHXR4hle_KndJLEPzzXxBdXh/preview"></iframe>
+            <p>LAB-01</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1l8KKjmrmp1POxDP5oX-tjSRQLHBMuMX7/preview"></iframe>
+            <p>Linked Lists</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1oZ16WM6ZvlWRLpQDt9R9m62VkR6BBDnm/preview"></iframe>
+            <p>Lab-02 P-1</p></div>
+    </div>
+
+    <div class="row">
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1xxtebjN9GIMSZWIIuln_bD1TEn_dpzWV/preview">
+            </iframe>
+            <p>Lab-02 P-2</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1OP2QS3Y-b0IsrREQ2mPWpOFVhuhyhXWt/preview"></iframe>
+            <p>Complexity of algorithms</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1UjhJH8SxihoCFglW3YxFbi1r7LVk3nAr/preview"></iframe>
+            <p>Stack & Queues</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1zZRRv3imQt4athjxYSSNXAWAEh9578Kl/preview"></iframe>
+            <p>Stack & Queues P-2</p></div>
+    </div>
+
+    <div class="row">
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1iW8bt0gWyIUNmswrgEjaZHA21u-idAoQ/preview">
+            </iframe>
+            <p> Advanced Pointer</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1Oh8bshLv3WFVQVR5KmOKIBhLIzBz2Meg/preview"></iframe>
+            <p>Stack & Queues P-3 + Lab-03</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/19oEYBJgCzAOsGHln1kMHmkph47UxlBpj/preview"></iframe>
+            <p>Lab-03 P-2</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1T5_BU2QUCvYDzUp13qb0cJnnNwm6B59X/preview"></iframe>
+            <p>Binary Tree</p></div>
+    </div>
+
+    <div class="row ">
+        <div class="col-3 col-s-3 ">
+            <iframe src="https://drive.google.com/file/d/1g8rFB51B2iNuZlxXLuDuYGz5ZxluPnT7/preview"></iframe>
+            <p>Binary Tree + Lab 04 Explained</p></div>
+        <div class="col-3 col-s-3 ">
+            <iframe src="https://drive.google.com/file/d/1xxYcR9u8JzjllqMLoVroPmLO8Srz90i_/preview"></iframe>
+            <p>LAB-04 + Sorting Algorithms</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1iW8bt0gWyIUNmswrgEjaZHA21u-idAoQ/preview"></iframe>
+            <p> Advanced Pointer</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1iW8bt0gWyIUNmswrgEjaZHA21u-idAoQ/preview"></iframe>
+            <p> Lab-05</p></div>
+    </div>
+
+    <div class="row ">
+        <div class="col-3 col-s-3 ">
+            <iframe src="https://drive.google.com/file/d/1tP6HFj-ZsfkHtDegUBMXWTRbo2j2paMq/preview"></iframe>
+            <p>Hashing</p></div>
+        <div class="col-3 col-s-3 ">
+            <iframe src="https://drive.google.com/file/d/17m1TRAsUnW_NkFkfk1kMIo4vqnS-No3t/preview"></iframe>
+            <p>Hashing + Lab-05</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/12wYJxJnah3jx5tlJnuemE9JvdbUP4Mcm/preview"></iframe>
+            <p>Graph</p></div>
+    </div>
+</section>
+
+<!--|                    |-->
+<!--|     Computer Architecture|-->
+<!--|                    |-->
+<section id="Computer_Architecture">
+    <div class="row">
+        <h2 class="header" style="text-align: center;"> Computer Architecture </h2>
+        <h3 style="text-align: center">Lecturer. KONG Kannika</h3>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1bsdgNZPnwlF5fWscpttiWGPX283g6B1J/preview">
+            </iframe>
+            <p>Instruction</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1yxLl2kPxdBQNgsKmbf0-0-nRfCKn9WzI/preview"></iframe>
+            <p>Basic Computer Organization
+            </p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1Xj5QlX9jkF9ZrXlJhw5XWUAMkBIK3Jbh/preview"></iframe>
+            <p>Processor & Memory</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/12qup78WXcELSkwZ77jAcw0np7L_PhKmI/preview"></iframe>
+            <p>Processor & Memory P-2</p></div>
+    </div>
+
+    <div class="row">
+        <div class="col-3 col-s-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MnJfnNSS_co"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <p>OUTPUT HELLO WORLD</p></div>
+        <div class="col-3 col-s-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Zy2rgX27Dlw"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <p>INPUT/OUTPUT</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1nQSubDJ9XeVwjB7QClWLampaWzdXO_Jc/preview">
+            </iframe>
+            <p>Assembly - MOV Instruction</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1FR8r06DF38xNqu0Wea9n3XoKOaaZ7L7X/preview"></iframe>
+            <p>Increment/decrement/Addition</p></div>
+    </div>
+
+    <div class="row">
+        <div class="col-3 col-s-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/c-3SPgFvOBU"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <p>Increment/decrement value in REG</p></div>
+        <div class="col-3 col-s-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/afTqoamOFwY"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <p>Add two registers and display it</p></div>
+        <div class="col-3 col-s-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kaiO7N_GX6A"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <p>Moving smaller value into larger register</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1L00Wq0afwph0KQgHhYer4WdsiIB0M51S/preview"></iframe>
+            <p>MOV 8bit to 16bit Reg</p></div>
+    </div>
+
+    <div class="row">
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1vy1J7SqQXXNFufKUokZYODp3zF8qIhZp/preview">
+            </iframe>
+            <p>INCREMENT / DECREMENT</p></div>
+        <div class="col-3 col-s-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UxbRQ_o80p8"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <p>OUTPUT SUBS 3 Regs</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1rFUBPB3RyXL-WzbD3WPmM_GK_GxDAR5r/preview"></iframe>
+            <p>Addition/Sub</p></div>
+        <div class="col-3 col-s-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/B14Y6EAZbJ0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <p>Flag</div>
+    </div>
+
+    <div class="row">
+        <div class="col-3 col-s-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Cs0Gzi9lGtA"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <p>instruction JMP</p></div>
+        <div class="col-3 col-s-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UxbRQ_o80p8"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <p>OUTPUT SUBS 3 Regs</p></div>
+        <div class="col-3 col-s-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PhD4xR1Dh-4"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <p>LOOP Instruction</p></div>
+        <div class="col-3 col-s-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/B14Y6EAZbJ0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <p>Flag</div>
+    </div>
+
+    <div class="row">
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1x_CtmAUSR_VtXqlmdS6kjS4deVvgkgWc/preview">
+            </iframe>
+            <p>JMP Instruction</p></div>
+        <div class="col-3 col-s-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MnJfnNSS_co"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <p>OUTPUT String</p></div>
+        <div class="col-3 col-s-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MMDwkEiddHY"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <p>Input 2 Values</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1XInsMktDOieSsvuHVynBzBe7SZTnmifF/preview">
+            </iframe>
+            <p>JMP - LOOP - Flag Instructions</p></div>
+    </div>
+
+    <div class="row">
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1DfcvwpLLidtGfWzRwYhFES8x81YmGnKE/preview">
+            </iframe>
+            <p>MUL & DIV Instructions</p></div>
+        <div class="col-3 col-s-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8Hr1xsQSwxw"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <p>MUL Instruction</p></div>
+        <div class="col-3 col-s-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FieYVWtg4uk"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <p>DIV Instruction</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/124HvEssAagxdR5CkCWztlkuhJmdfRlJB/preview">
+            </iframe>
+            <p>JC & JNC </p></div>
+    </div>
+
+    <div class="row">
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1oVVTsrLWu5TyE6bz3GbjGe-D8_opUa60/preview">
+            </iframe>
+            <p>PUSH & POP</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1OmVyPLCcc4gdnaEXRMjhx7V38EV8plkm/preview"></iframe>
+            <p>Variable</p></div>
+    </div>
+
+</section>
+
+|                    |
+|     DATABASE     |
+|                    |
+<section id="Database">
+    <div class="row">
+        <h2 class="header" style="text-align: center;">DATABASE & ANALAYSIS</h2>
+        <h3 style="text-align: center">LECTURER PHAN RAKSMEY</h3>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1IhRs7-V3IHgobXwMFOBSXJXioStYWIUl/preview">
+            </iframe>
+            <p>Introduction to DB & MySQL Workbench</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1tW5430KdY9M67joaISvCYRvovp72k1MC/preview"></iframe>
+            <p>Normalization</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1Lw5Suw0UXqcqnxD0IiUZiavJ6BiaOzNk/preview">
+            </iframe>
+            <p>Normalization Exercises</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1KYikwkbgbzKC8KaVrbh6WC7Z-qsp85a5/preview"></iframe>
+            <p>Normalization Exercises</p></div>
+    </div>
+
+    <div class="row">
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1aQfQ1GgrXI99ib8Y9kQhDn7M2BjXiwXh/preview"></iframe>
+            <p>Normalization Assignment</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1uWzqb65uYQfF4l_3fIDAtqJERUOwaQe7/preview"></iframe>
+            <p>Entity Relationship Model</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1suUbF3AocviabdB4tkVFjbm298bc3m2s/preview"></iframe>
+            <p>Data Type</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1LPAC-U8tsYxgb7FOfCGT45pC0ZX0uIHq/preview">
+            </iframe>
+            <p>Exercise</p></div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1hm4_tbIfAmXyaT8XvPRIzUYUoAM6SK_w/preview"></iframe>
+            <p>ER Diagram Assignment</p></div>
+        <div class="col-3 col-s-">
+            <iframe src="https://drive.google.com/file/d/1DXuKf0_UXbh9sTch1CQEtcg6Kalfqc6m/preview"></iframe>
+            <p>Entity Relation Model Exercise</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1gvV5KqC_NN7msh1_sG-nqgNz73WN_nQD/preview"></iframe>
+            <p>Data Type in MySQL</p></div>
+        <div class="col-3 col-s-">
+            <iframe src="https://drive.google.com/file/d/1d833xhAg--SpvN165UvuEm7PN-3XC424/preview"></iframe>
+            <p>ER Model Assigment</p></div>
+    </div>
+
+    <div class="row ">
+
+        <div class="col-3 col-s-">
+            <iframe src="https://drive.google.com/file/d/1JY5AWDeG2bj67SxqrzqAixkrJZ8Kngr0/preview">
+            </iframe>
+            <p>Relational Model - Weak Entity</p></div>
+        <div class="col-3 col-s-">
+            <iframe src="https://drive.google.com/file/d/1xww772e8p1JizpTvoW2QlNWUn3Yv5mcb/preview"></iframe>
+            <p></p>ER Model Assigment 1
+        </div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1Pil32rma4lfUI5O-4qmNSZGxOX1t8eDn/preview"></iframe>
+            <p>From an entity relationship Diagram to relational schema</p></div>
+        <div class="col-3 col-s-">
+            <iframe src="https://drive.google.com/file/d/1yWNjqOTwNSsRFlFkVo82PDMoSSliAPTE/preview"></iframe>
+            <p>Relational Model Exercises</p></div>
+    </div>
+
+    <div class="row ">
+
+        <div class="col-3 col-s-">
+            <iframe src="https://drive.google.com/file/d/118JnUkMrkSa37hVeFOdQe_-wMShWG-U0/preview">
+            </iframe>
+            <p>MySQL User Account & Privileges</p></div>
+        <div class="col-3 col-s-">
+            <iframe src="https://drive.google.com/file/d/1egcvm_nhXfeE2q0Fmg40rwzzgt9W_qd2/preview"></iframe>
+            <p>ER To Relational Mapping</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1qtaJLyP9cNcXsOh8rscgZpQ5RmUSlg6a/preview"></iframe>
+            <p></p>Convert ER to Relation Model Exercise
+        </div>
+        <div class="col-3 col-s-">
+            <iframe src="https://drive.google.com/file/d/1Eg4z-0kaKo_7H0Nz80ie-oYLXTRiQLt-/preview"></iframe>
+            <p>MySQL User Account & Privileges</p></div>
+    </div>
+
+    <div class="row ">
+
+        <div class="col-3 col-s-">
+            <iframe src="https://drive.google.com/file/d/1_6KIWzHtFbenDb30AcM57YTomiLmlljG/preview">
+            </iframe>
+            <p>MySQL User Account & Privileges Implementation Query Exercise</p></div>
+        <div class="col-3 col-s-">
+            <iframe src="https://drive.google.com/file/d/1a9gb7J-Pn1wagrPVqVR9dlqI99NLDI88/preview"></iframe>
+            <p>SQL Query DATABASE & TABLE</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1sV-yq0FkneVbhb0OOxF5JOrR8n9-pRnO/preview"></iframe>
+            <p>Introduction phpMyAdmin - Localhost & SELECT Query</p></div>
+        <div class="col-3 col-s-">
+            <iframe src="https://drive.google.com/file/d/119jBxjDdHTIM2i3oX5DSCdjyoJnLtkye/preview"></iframe>
+            <p>SQL Query - Database & Table Practice 1</p></div>
+    </div>
+
+    <div class="row ">
+
+
+        <div class="col-3 col-s-">
+            <iframe src="https://drive.google.com/file/d/1DWN0EVHCoy1eE0_OH7bALDaLTPftudwv/preview">
+            </iframe>
+            <p>SQL Query - Database & Table Practice & SELECT Query correction</p></div>
+        <div class="col-3 col-s-">
+            <iframe src="https://drive.google.com/file/d/1hXDfNnv0yTdyvcSW9pPjU6hq2CL7VJ36/preview"></iframe>
+            <p>MySQL CREATE INSERT WEHERE DELETE Condition</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1CiIPR1z0sRrckJQyimh62ciGl7dL2Pln/preview"></iframe>
+            <p>QUESTION / ANSWER</p></div>
+        <div class="col-3 col-s-">
+            <iframe src="https://drive.google.com/file/d/13VnW15eQlBnBfiP4wm4l8MOgxfmT-Env/preview">
+            </iframe>
+    </div>
+
+    <div class="row">
+
+            <p>MySQL Create Table Online Practice 20 PROBLEMs</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1IalUifNsSbZgR_Kqge899Lj3eiuo05Ri/preview"></iframe>
+            <p>SQL QUERY CONSTRAINTS & TRIGGERS</p></div>
+        <div class="col-3 col-s-3">
+            <iframe src="https://drive.google.com/file/d/1IalUifNsSbZgR_Kqge899Lj3eiuo05Ri/preview"></iframe>
+            <p>SQL QUERY CONSTRAINTS & TRIGGERS Part 2</p></div>
+    </div>
+</section>
+<!--|                    |-->
+<!--|     WEB DESIGN     |-->
+<!--|                    |-->
+<section id="Web" style="background: #ad0111">
+    <div class="row">
+        <h2 class="header" style="text-align: center;">WEB DESIGN</h2>
+        <h3 style="text-align: center; color: white">LECTURER KHEM PUTHEA</h3>
+        <div class="col-4 col-s-12">
+            <h2 style="text-align: center; color: white">HTML PLAYLIST</h2>
+            <iframe  src="https://www.youtube.com/embed/videoseries?list=PLA1dcphErOcdf_z9yEVSrJ6vtGH4Xwz2H"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+            <div class="col-4 col-s-12">
+            <h2 style="text-align: center; color: white">CSS PLAYLIST</h2>
+            <iframe src="https://www.youtube.com/playlist?list=PLA1dcphErOcf5I1-ZAK1VJ_du_nxpUvMo"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+    <div class="col-4 col-s-12">
+        <h2 style="text-align: center; color: white">JAVASCRIPT PLAYLIST</h2>
+        <iframe src="https://www.youtube.com/embed/videoseries?list=PLA1dcphErOcf5I1-ZAK1VJ_du_nxpUvMo"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    </div>
+
+</section>
+
+<div class="footer">
+    <span> Copyright © 2020 NIPTICT - All this video recorded authorized to only NIPTICT student .</span>
+</div>
+
+<script>
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+    let i, frames;
+    frames = document.getElementsByTagName("iframe");
+    for (i = 0; i < frames.length; ++i) {
+        // The iFrame
+        if (!frames[i].hasAttribute("allowfullscreen")) {
+            frames[i].setAttribute('allowFullScreen', '')
+        }
+    }
+</script>
+</body>
+</html>
